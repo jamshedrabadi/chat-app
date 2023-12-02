@@ -1,34 +1,22 @@
-Dependencies:
-
-express
-dotenv
-
-Dev Dependencies:
-
-nodemon
-eslint
-eslint-config-semistandard
-eslint-config-standard
-eslint-plugin-import
-eslint-plugin-node
-eslint-plugin-promise
-eslint-plugin-sort
-eslint-plugin-sort-requires
-eslint-plugin-standard
-eslint-plugin-jsdoc
+***** Root *****
 
 npx create-react-app chat-app-frontend
 - run this in chat-app root folder
 - chat-app-frontend will be the name of the frontend folder
 - remove logo, tests, vitals, setups fron react app
 
+***** Backend *****
+
+npm i express dotenv mongoose
+
+npm i -D nodemon eslint eslint-config-semistandard eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-sort eslint-plugin-sort-requires eslint-plugin-standard eslint-plugin-jsdoc
+
+***** Frontend *****
+
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
-- run this in chat-app-frontend folder
 - for chakra-ui
 
 npm i react-router-dom@5
-- run this in chat-app-frontend folder
 - v6 breaks a few features
 
 npm i axios
-- run this in chat-app-frontend folder

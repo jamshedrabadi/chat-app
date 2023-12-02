@@ -5,8 +5,8 @@ app.get('/', (req, res) => {
     res.send('API is running');
 });
 
-app.get('/', (req, res) => {
-    res.send('API is running');
+app.get('/api/chat', (req, res) => {
+    res.send([{ name: 'jam' }, { name: 'kek' }]);
 });
 
 const port = process.env.PORT || 3001;

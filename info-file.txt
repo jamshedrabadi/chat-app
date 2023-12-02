@@ -16,3 +16,5 @@ eslint-plugin-sort
 eslint-plugin-sort-requires
 eslint-plugin-standard
 eslint-plugin-jsdoc
+
+npx create-react-app chat-app-frontend

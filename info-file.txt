@@ -20,3 +20,14 @@ npm i react-router-dom@5
 - v6 breaks a few features
 
 npm i axios
+
+***** Database *****
+
+create new login on mongodb.com
+atlas
+create new user
+create cluster
+create db
+add all network access
+
+

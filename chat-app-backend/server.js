@@ -1,5 +1,10 @@
 const express = require('express');
 const app = express();
+const dbConnection = require('./config/db.js');
+const dotenv = require('dotenv');
+
+// Load Config
+dotenv.config();
 
 const chats = [{
     id: 1,
@@ -16,6 +21,8 @@ app.get('/', (req, res) => {
 app.get('/api/chat', (req, res) => {
     res.send(chats);
 });
+
+dbConnection();
 
 const port = process.env.PORT || 3001;
 

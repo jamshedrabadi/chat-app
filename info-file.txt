@@ -7,7 +7,7 @@ npx create-react-app chat-app-frontend
 
 ***** Backend *****
 
-npm i express dotenv mongoose
+npm i express dotenv mongoose jsonwebtoken
 
 npm i -D nodemon eslint eslint-config-semistandard eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-sort eslint-plugin-sort-requires eslint-plugin-standard eslint-plugin-jsdoc
 
@@ -30,4 +30,15 @@ create cluster
 create db
 add all network access
 
+***** Image upload *****
 
+cloudinary.com
+create account
+settings
+upload
+enable uploads
+add upload
+add name and save
+dashboard
+API environment variables - more info
+API base URL /image/upload

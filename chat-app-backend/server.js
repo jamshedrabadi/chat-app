@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const chatRoutes = require('./routes/chat.routes.js');
 const dbConnection = require('./config/db.js');
 const dotenv = require('dotenv');
 const userRoutes = require('./routes/user.routes.js');
@@ -8,20 +9,8 @@ const { notFound, errorHandler } = require('./middlewares/error.middlewares.js')
 // Load Config
 dotenv.config();
 
-const chats = [{
-    id: 1,
-    name: 'jam',
-}, {
-    id: 2,
-    name: 'kek',
-}];
-
 app.get('/', (req, res) => {
-    res.send('API is running');
-});
-
-app.get('/api/chat', (req, res) => {
-    res.send(chats);
+    return res.send('API is running');
 });
 
 // Connect to MongoDB Database
@@ -32,6 +21,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/user', userRoutes);
+app.use('/api/chat', chatRoutes);
 
 // Error handling routes
 app.use(notFound);

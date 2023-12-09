@@ -56,7 +56,29 @@ const loginUser = async (req, res) => {
     }
 };
 
+const searchUsers = async (req, res) => {
+    try {
+        const { search } = req.query;
+        const keyword = search
+            ? {
+                $or: [
+                    { name: { $regex: search, $options: 'i' } },
+                    { email: { $regex: search, $options: 'i' } },
+                ],
+            }
+            : {};
+        const users = await User.find(keyword).find({ _id: { $ne: req.user._id } }); // all except current user
+        // const users = await User.find(keyword); // all except current user
+        return res.status(200).send(users);
+    } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log('Error in searchUsers', error);
+        return res.status(400).send({ message: 'Error in searchUsers' });
+    }
+};
+
 module.exports = {
     registerUser,
     loginUser,
+    searchUsers,
 };
